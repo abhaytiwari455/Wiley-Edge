@@ -1,0 +1,43 @@
+
+public class HelloWorld {
+	
+	public static void main(String args []){
+		System.out.println("Hello World");
+		HelloWorld obj = new HelloWorld();
+		obj.useIfElse();
+		obj.useWhile();
+		obj.useFor();
+		obj.useSwitch();
+	}
+
+	private void useSwitch() {
+		int i = 1;
+		switch(i) {
+		case 1: System.out.println("switch");
+		default: System.out.println("switch");
+		}
+	}
+
+	private void useWhile() {
+		// TODO Auto-generated method stub
+		int i=2;
+		while(i>1) {
+			System.out.println("while");
+			i--;
+		}
+	}
+
+	private void useFor() {
+		// TODO Auto-generated method stub
+		for(int i=1; i<2; i++) {
+			System.out.println("for");
+		}
+	}
+
+	private void useIfElse() {
+		// TODO Auto-generated method stub
+		int i=1;
+		if(i==1)System.out.println("if-else");
+		else System.out.println("if-else");
+	}
+}
