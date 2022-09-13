@@ -1,1 +1,88 @@
 
+
+public enum AccountType {
+	SAVINGS(500.0), CURRENT(1000.0);
+	Double minBalance;
+	AccountType(Double i) {
+		// TODO Auto-generated constructor stub
+		this.minBalance=i;
+	}
+    Double getMinBalance() {
+    	return minBalance;
+    }
+	
+	
+}
+
+public class BankAccount {
+	int accountId;
+	Double openingBalance, currentBalance,minBalance;
+    static int id;
+    static Double totalBalance;
+	String accountHolderName;
+	AccountType accountType;
+    public BankAccount(String accountHolderName, Double openingBalance, String accountType) {
+    	if(openingBalance <0) {
+    		System.out.println("Invalid opening balance it is changed to 0, if not 0 please change");
+    		this.openingBalance = 0.0;
+    		try {
+    			//this.getClass().get
+			} catch (Throwable e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    	}
+    	else 
+    	this.openingBalance = openingBalance;
+		this.accountId= ++id;
+		this.accountHolderName = accountHolderName;		
+		this.currentBalance = openingBalance;
+		if(accountType.equals("savings"))
+		this.accountType = AccountType.SAVINGS;
+		else if(accountType.equals("current"))
+			this.accountType = AccountType.CURRENT;
+		else System.out.println("Invalid Account");
+		this.minBalance= this.accountType.getMinBalance();
+	}
+	public void depositAmount(double amount) {
+		this.currentBalance = this.currentBalance + amount;
+		totalBalance += amount;
+	}
+    public void withdrawAmount(double amount) {
+    	if(totalBalance>=amount) {
+    		if(this.currentBalance>=amount) {
+    			this.currentBalance -=amount;
+    			totalBalance-=amount;
+    			System.out.println("Done");
+    		}
+    		else 
+    			System.out.println("Amount not availabe in the account");
+    	}
+    	else 
+    		System.out.println("Amount not availabe in the bank");
+    }
+    public void getCurrentBalance() {
+    	System.out.println( currentBalance);
+    }
+    public void displayTotalBalance() {
+    	System.out.println( totalBalance);
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		totalBalance=10.0;
+		
+	BankAccount account1= new BankAccount("acc1",-123.0,"savings");
+	BankAccount account2= new BankAccount("acc2",13.0, "current");
+	BankAccount account3= new BankAccount("acc3",1.0,"savings");
+	
+	account1.displayTotalBalance();
+	account2.depositAmount(5000);
+	account3.depositAmount(5432);
+	account2.withdrawAmount(13455);
+	account2.getCurrentBalance();
+	account3.displayTotalBalance();
+	
+	}
+
+}
