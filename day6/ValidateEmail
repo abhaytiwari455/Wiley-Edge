@@ -1,0 +1,25 @@
+import java.util.regex.*;    
+import java.util.*;    
+public class EmailValidation4{  
+    public static void main(String args[]){  
+        ArrayList<String> emails = new ArrayList<String>();  
+          
+        emails.add("mandarmjog@gmail.com");  
+        emails.add("wiley@g@.com");  
+        emails.add(".wi@.gmail@1234");  
+        
+        //Regular Expression   
+        String regex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";  
+        //Compile regular expression to get the pattern  
+        Pattern pattern = Pattern.compile(regex);  
+        //Iterate emails array list  
+        for(String email : emails){  
+            //Create instance of matcher   
+            Matcher matcher = pattern.matcher(email);  
+            if(matcher.matches())
+            System.out.println(email +" : "+ is valid+"\n");  
+            else
+            System.out.println(email +" : "+ is invalid+"\n"); 
+        }  
+    }  
+}  
