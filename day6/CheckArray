@@ -1,0 +1,22 @@
+public class CheckArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []array = new int[] {1,2,3,4,5,5,6,91};
+		int []array1 = new int[] {1,2,6,1};
+		int []array2 = new int[] {1,2,3,4,5,5,6,1};
+		checkArray(array);
+		checkArray(array1);
+		checkArray(array2);
+	}
+
+	private static void checkArray(int[] array) {
+		// TODO Auto-generated method stub
+		int n= array.length;
+		if(n>5 && array[0]==array[n-1])
+			System.out.println("This is valid array");
+		else
+			System.out.println("This is invalid array");
+	}
+
+}
