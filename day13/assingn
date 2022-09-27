@@ -1,0 +1,38 @@
+Recursion
+1.	Consider a group of n men arranged in a circle. Every k th man will be killed around the circle until only one survivor remains. Write an algorithm that finds the k position on this survivor.
+
+2.	Consider a 5x5 grid with five defensive towers spread across the grid. To provide the optimal defence for the grid, we have to build a tower on each row of the grid. Find all the solutions for building these towers so that none of them share the same column or diagonal.
+
+3.	Consider a sorted array of n elements that allows duplicates. An index k is magic if array[k]=k. Write a recursive algorithm that finds the first magic index. 
+
+4.	Print all the valid combinations of n pairs of curly braces. A valid combination is when the curly braces are properly opened and closed. For e.g. For n=3, valid combinations are
+{{{}}}, {{}{}},{{}}{}, {}{{}},{}{}{}
+
+5.	A person walks up a staircase. They can hope either one step, two step, or three steps at a time. Count the number of possible ways they can reach the top of staircase.
+
+Array
+1.	Consider a string that can contain ASCII and Unicode characters ranging between 0-65,535. Write a code that returns true if this string contains unique characters. White spaces can be ignored.
+
+2.	Write a program to rotate the matrix of nxn by 90 degrees in a counterclock wise direction
+
+3.	Consider given n x m matrix of integers M. If M(i,j) is equal to 0, then the entire row, i and column j, should contain only zeros. Write a code to achieve this.
+
+4.	Consider that you have been given array of integers, arr. Write several solutions that returns true if this array contains duplicates. 
+
+LinkedList and Map 
+1.	Given the n nuts and n bolds, consider one-to-one mapping between them. Write a code that finds all the matches between the nuts and the bolts with the minimum number of iterations. 
+
+char[] nuts={'$', '%", '#', '&','@'}
+char[] bolts={'@','#','$','%','&'}
+
+2.	Consider unsorted linkedlist of integers. Write a code that removes the duplicates.
+
+3.	Write the code that moves the last node of linkedlist to the first. 
+
+
+Stack and Queues
+1.	Consider that you have been given a String, containing the curly braces. Write a code that returns if there are matching pairs of the curly braces.
+2.	Design a queue via two stacks
+3.	Design a stack via queue. 
+4.	Consider you’ve been given a matrix m x n, containing only 0s and 1s. By convention, 1 means land and 0 means water. Write a code that counts the number of islands. An island is defined as a group of 1s surrounded by 0s. 
+
